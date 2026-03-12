@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Cat Expert</title>
+
+<style>
+body{
+text-align:center;
+font-family:Arial;
+font-size: x-large;
+background-image:url("cat3.jpg") ;
+background-repeat: no-repeat;
+background-size:40%;
+margin-top:100px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>🐱 Cat Expert Consultation</h1>
+
+<p id="expert"></p>
+
+<button onclick="generateExpert()">Get Advice</button>
+
+<br><br>
+
+<a href="support.html">Back to Support</a>
+
+<script>
+
+var experts = [
+"Sir Whiskerton the Debugger",
+"Professor Meowington III",
+"Captain Pawbytes",
+"Dr. Fluffy McTech",
+"Lord Scratchington"
+];
+
+var tips = [
+"Sit on the keyboard until the problem disappears.",
+"Knock the router off the table to reset WiFi.",
+"Stare at the screen until it fixes itself.",
+"Take a nap and try again later.",
+"Restart the computer with your paw."
+];
+
+function generateExpert(){
+
+var randomExpert = experts[Math.floor(Math.random()*experts.length)];
+
+var randomTip = tips[Math.floor(Math.random()*tips.length)];
+
+document.getElementById("expert").innerHTML =
+randomExpert + " says: " + randomTip;
+
+}
+
+</script>
+
+</body>
+
+</html>
